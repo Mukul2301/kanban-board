@@ -53,7 +53,7 @@ const ColumnContainer = (props: Props) => {
         ref={setNodeRef}
         style={style}
         className="bg-columnBackgroundColor opacity-60 rorder-rose-500 border-2 w-[350px] h-[500px] max-h-[500] flex rounded-md flex-col"
-      ></div>
+      />
     );
   }
 
@@ -72,11 +72,11 @@ const ColumnContainer = (props: Props) => {
         className="bg-mainBackgroundColor text-md h-[60px] cursor-grab rounded-md rounded-b-none font-bold p-3 border-columnBackgroundColor bottom-4 flex items-center justify-between"
       >
         <div className="flex gap-2">
-          <div className=" flex justify-center items-center bg-columnBackgroundColor  px-2 py-2 text-sm rounded-full">
-            0
+          <div className=" flex justify-center  items-center bg-columnBackgroundColor  px-2 py-2 text-sm rounded-full">
+            {tasks.length}
           </div>
           {!edit ? (
-            column.title && <div>{column.title}</div>
+            column.title && <div className="pt-1">{column.title}</div>
           ) : (
             <input
               className="bg-black focus:border-red-500 outline-none px-2 border rounded"

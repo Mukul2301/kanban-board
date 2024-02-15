@@ -11,3 +11,18 @@ export type Task ={
     content:string
 
 }
+
+export const defaultColumns = [
+    {
+      id: 'todo',
+      title: 'Todo',
+    },
+    {
+      id: 'doing',
+      title: 'Work in progress',
+    },
+    {
+      id: 'done',
+      title: 'Done',
+    },
+  ];
